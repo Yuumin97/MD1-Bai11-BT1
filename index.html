@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <STYLE>
+        body{
+            text-align: center;
+        }
+    </STYLE>
+</head>
+<body>
+<h1>NGÂN HÀNG TỪ ĐIỂN MINH ĐỨC IELTS 9.5</h1>
+<input type="text" id="nhap"> <button onclick="search()">tra cứu</button>
+<h3 id="result"></h3>
+<script>
+    let tiengViet = ['Học','Chơi','Bài tập','Đá bóng','Máy tính','Xe máy','Điên','Điện thoại','Đức đẹp trai']
+    let tiengAnh = ['learn','play','exercise','play football','computer','motorcycle','cazy','phone','Duc dep zai khong anh chu ai yeahhh'];
+    let vitri=-1
+    function search() {
+        let input = document.getElementById('nhap').value;
+        for (let i = 0;i<tiengAnh.length;i++){
+            if (input === tiengAnh[i]){
+                vitri =i
+                document.getElementById('result').innerHTML=tiengViet[vitri]
+                break;
+            } else {
+                document.getElementById('result').innerHTML="Chua co du lieu";
+                vitri= -1
+            }
+        }
+        console.log(vitri)
+    }
+</script>
+</body>
+</html>
